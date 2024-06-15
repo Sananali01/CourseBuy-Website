@@ -99,21 +99,21 @@ const TabsWrapper = styled.div`
     margin-top: 16px;
 
     .tabs-head-item button {
-      border: 1px solid rgba(0, 0, 0, 0.7);
+      border: 2px solid rgba(0, 0, 0, 0.7);
       padding: 10px 13px;
       margin-right: 6px;
       transition: var(--transition);
       font-weight: 500;
       font-size: 15px;
       margin-bottom: 10px;
-
+      border-radius: 5px;
       &:hover {
         background-color: var(--clr-black);
         color: var(--clr-white);
       }
 
       &.active {
-        background-color: var(--clr-black);
+        background-color: var(--clr-orange);
         color: var(--clr-white);
         /* Additional styles for active tab */
       }

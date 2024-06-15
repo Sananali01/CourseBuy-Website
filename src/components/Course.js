@@ -1,24 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import StarRating from "../components/StarRating";
 import { useCartContext } from '../context/cart_context';
 
 const Course = (props) => {
-  const {id, image, course_name, creator, actual_price, discounted_price, rating_count, rating_star, category} = props;
-  const {addToCart} = useCartContext();
+  const { id, image, course_name, creator, actual_price, discounted_price, rating_count, rating_star, category } = props;
+  const { addToCart } = useCartContext();
 
   return (
     <CourseCard>
       <div className='item-img'>
-        <img src = {image} alt = {course_name} />
+        <img src={image} alt={course_name} />
       </div>
       <div className='item-body'>
         <h5 className='item-name'>{course_name}</h5>
         <span className='item-creator'>{creator}</span>
         <div className='item-rating flex'>
           <span className='rating-star-val'>{rating_star}</span>
-          <StarRating rating_star = {rating_star} />
+          <StarRating rating_star={rating_star} />
           <span className='rating-count'>({rating_count})</span>
         </div>
         <div className='item-price'>
@@ -27,8 +27,8 @@ const Course = (props) => {
         </div>
       </div>
       <div className='item-btns flex'>
-        <Link to = {`/courses/${id}`} className = "item-btn see-details-btn">See details</Link>
-        <Link to = "/cart" className='item-btn add-to-cart-btn' onClick={() => addToCart(id, image, course_name, creator, discounted_price, category)}>Add to cart</Link>
+        <Link to={`/courses/${id}`} className="item-btn see-details-btn">See details</Link>
+        <Link to="/cart" className='item-btn add-to-cart-btn' onClick={() => addToCart(id, image, course_name, creator, discounted_price, category)}>Add to cart</Link>
       </div>
     </CourseCard>
   )
@@ -36,8 +36,12 @@ const Course = (props) => {
 
 const CourseCard = styled.div`
   margin-bottom: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+  background: transparent;
+    border-radius: 12px;
+    box-shadow: 0px 8px 2px 2px #000;
+    cursor: pointer;
+    margin-bottom: 30px;
+    overflow: hidden;
   display: flex;
   flex-direction: column;
   .item-body{
@@ -96,10 +100,10 @@ const CourseCard = styled.div`
         background-color: transparent;
         border: 1px solid var(--clr-black);
         margin-right: 5px;
-
+        text-decoration: none;
         &:hover{
-          background-color: rgba(0, 0, 0, 0.9);
-          color: var(--clr-white);
+          background-color: var(--clr-orange);
+          color: var(--clr-black);
         }
       }
 
@@ -107,9 +111,9 @@ const CourseCard = styled.div`
         background: rgba(0, 0, 0, 0.9);
         color: var(--clr-white);
         border: 1px solid rgba(0, 0, 0, 0.9);
-
+        text-decoration: none;
         &:hover{
-          background-color: transparent;
+          background-color: var(--clr-orange);
           color: rgba(0, 0, 0, 0.9);
         }
       }
