@@ -33,6 +33,10 @@ box-shadow: 4px 8px 2px 2px white;
 cursor: pointer;
 margin-bottom: 30px;
 overflow: hidden;
+transition: transform 0.3s;
+&:hover {
+        transform: translateY(-5px);
+      }
 
       h1{
         color: var(--clr-orange);

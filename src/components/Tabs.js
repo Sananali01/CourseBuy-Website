@@ -21,7 +21,8 @@ const Tabs = () => {
   return (
     <TabsWrapper>
       <div className='tabs'>
-        <ul className='flex flex-wrap'>
+        <h1 className='text-center main-text mb-5'>Courses </h1>
+        <ul className='flex flex-wrap  ml-5'>
           <li className='tabs-head-item'>
             <button
               type='button'
@@ -82,7 +83,7 @@ const Tabs = () => {
           </li>
         </ul>
 
-        <div className='tabs-body'>
+        <div className='tabs-body mr-5 ml-5'>
           {courses
             .filter((course) => course.category === activeTab)
             .map((course) => (
@@ -97,6 +98,10 @@ const Tabs = () => {
 const TabsWrapper = styled.div`
   .tabs {
     margin-top: 16px;
+    .main-text{
+      font-size: xx-large;
+      font-weight: bolder;
+    }
 
     .tabs-head-item button {
       border: 2px solid rgba(0, 0, 0, 0.7);

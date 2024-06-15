@@ -32,7 +32,10 @@ const CategoriesListWrapper = styled.div`
   }
   .categories-list{
     gap: 32px;
+  
   }
+
+  
   @media screen and (min-width: 600px){
     .categories-list{
       grid-template-columns: repeat(2, 1fr);

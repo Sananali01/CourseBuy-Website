@@ -16,6 +16,9 @@ const Sidebar = () => {
       <div className='sidebar-content'>
       <h6 className='fs-18'>Pages</h6>
         <ul className='sidebar-links'>
+        <li className='sidebar-link-item fw-5'>
+            <Link to="/tabs">Courses</Link>
+          </li>
           <li className='sidebar-link-item fw-5'>
             <Link to="/contact">Contact</Link>
           </li>
