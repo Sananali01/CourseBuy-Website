@@ -81,6 +81,7 @@ const InvoiceWrapper = styled.div`
         padding: 0;
         li {
           display: flex;
+          flex-direction:column;
           justify-content: space-between;
           margin-bottom: 10px;
           span:first-child {

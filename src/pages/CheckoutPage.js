@@ -65,7 +65,6 @@ const CheckoutPage = () => {
         <div className="checkout-header">
           <h2><FontAwesomeIcon icon={faLock} /> Secure Checkout</h2>
         </div>
-        <div className='form-and-invoice'>
         <form onSubmit={handleSubmit}>
           <div className="form-group-row">
             <div className="form-group">
@@ -229,7 +228,7 @@ const CheckoutPage = () => {
         </form>
         <br/>
         {formSubmitted && <InvoiceSlip formData={formData} cartItems={cartItems} />}
-        </div>
+
         
       </div>
     </CheckoutWrapper>
@@ -313,8 +312,7 @@ const CheckoutWrapper = styled.div`
 }
 
   .submit-btn {
-    width: 100%;
-    padding: 15px 0;
+    padding: 15px 13px;
     font-size: 16px;
     font-weight: 700;
     color: #fff;
