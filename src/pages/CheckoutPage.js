@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faAddressCard, faMapMarkerAlt, faCity, faBuilding, faFlag, faCreditCard, faCalendarAlt, faLock } from '@fortawesome/free-solid-svg-icons';
+import InvoiceSlip from './InvoiceSlip';
+import { useCartContext } from '../context/cart_context';
 
 const CheckoutPage = () => {
   const [formData, setFormData] = useState({
@@ -24,12 +26,15 @@ const CheckoutPage = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const [formSubmitted, setFormSubmitted] = useState(false); // State to track form submission
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData); // Placeholder for form submission logic
-    // Redirect or handle success message as needed
+    setFormSubmitted(true); // Set form submission state to true
   };
 
+  const { cart: cartItems } = useCartContext(); 
   // List of countries
   const countries = [
     'Select Country', 'Australia', 'Brazil', 'Canada', 'China', 'France', 'Germany', 'India', 'Japan', 'United Kingdom', 'United States',
@@ -60,6 +65,7 @@ const CheckoutPage = () => {
         <div className="checkout-header">
           <h2><FontAwesomeIcon icon={faLock} /> Secure Checkout</h2>
         </div>
+        <div className='form-and-invoice'>
         <form onSubmit={handleSubmit}>
           <div className="form-group-row">
             <div className="form-group">
@@ -221,6 +227,10 @@ const CheckoutPage = () => {
           </div>
           <button type="submit" className="submit-btn"><FontAwesomeIcon icon={faLock} /> Place Order</button>
         </form>
+        <br/>
+        {formSubmitted && <InvoiceSlip formData={formData} cartItems={cartItems} />}
+        </div>
+        
       </div>
     </CheckoutWrapper>
   );
@@ -230,7 +240,6 @@ const CheckoutWrapper = styled.div`
   padding: 50px 0;
 
   .container {
-    max-width: 600px;
     margin: 0 auto;
     background: #f9f9f9;
     border-radius: 10px;
@@ -282,7 +291,26 @@ const CheckoutWrapper = styled.div`
         border-color: #777;
       }
     }
+
+ 
   }
+
+  @media (min-width: 320px) and (max-width: 530px) {
+    .form-group-row {
+      flex-direction: column;
+  }
+}
+  
+  .form-and-invoice {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Adjust gap between form and invoice */
+    margin-top: 30px;
+  }
+
+  .checkout-form {
+
+}
 
   .submit-btn {
     width: 100%;
