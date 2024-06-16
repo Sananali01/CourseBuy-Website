@@ -8,6 +8,10 @@ import { Link } from 'react-router-dom';
 
 import python from "../assets/images/python.png";
 import java from "../assets/images/java.png";
+import javascript from "../assets/images/javascript.jpg";
+import angular from "../assets/images/angular.png";
+import c from "../assets/images/c++.jpg";
+import php from "../assets/images/php.jpg";
 
 // Define keyframes for animations
 const fadeInAnimation = keyframes`${fadeIn}`;
@@ -45,7 +49,7 @@ const CourseList = () => {
             <p>Learn Python programming for web development, data analysis, and more.</p>
           </div>
           <div className="category">
-            <img src="https://via.placeholder.com/300" alt="JavaScript" />
+            <img src={javascript} alt="JavaScript" />
             <h3>JavaScript</h3>
             <p>Master JavaScript for web development and building interactive websites.</p>
           </div>
@@ -55,17 +59,17 @@ const CourseList = () => {
             <p>Explore Java for enterprise applications and Android development.</p>
           </div>
           <div className="category">
-            <img src="https://via.placeholder.com/300" alt="Angular" />
+            <img src={angular} alt="Angular" />
             <h3>Angular</h3>
             <p>Learn Angular for building dynamic and scalable web applications.</p>
           </div>
           <div className="category">
-            <img src="https://via.placeholder.com/300" alt="C++" />
+            <img src={c} alt="C++" />
             <h3>C++</h3>
             <p>Dive into C++ for systems programming and game development.</p>
           </div>
           <div className="category">
-            <img src="https://via.placeholder.com/300" alt="PHP" />
+            <img src={php} alt="PHP" />
             <h3>PHP</h3>
             <p>Get proficient in PHP for server-side scripting and web development.</p>
           </div>
@@ -167,8 +171,9 @@ const CoursesListWrapper = styled.div`
       }
 
       h3 {
-        font-size: 1.8rem;
-        color: #333;
+        font-size: x-large;
+        color: var(--black);
+        font-weight: bold;
         margin: 10px 0;
       }
 

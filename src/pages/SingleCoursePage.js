@@ -38,7 +38,7 @@ const SingleCoursePage = () => {
             <div className='course-rating flex'>
               <span className='rating-star-val fw-8 fs-16'>{rating_star}</span>
               <StarRating rating_star={rating_star} />
-              <span className='rating-count fw-5 fs-14'>({rating_count})</span>
+              <span className='rating-count fw-5 fs-14 '>({rating_count})</span>
               <span className='students-count fs-14'>{students}</span>
             </div>
 
@@ -147,7 +147,7 @@ const SingleCourseWrapper = styled.div`
     }
     .rating-count{
       margin-left: 6px;
-      color: #d097f6;
+      color: var(--clr-orange);
     }
     .course-info{
       li{
@@ -173,9 +173,14 @@ const SingleCourseWrapper = styled.div`
     .course-btn{
       margin-top: 16px;
       .add-to-cart-btn{
+        color: white;
+        background: var(--clr-orange);
         padding: 12px 28px;
-        span{
-          margin-left: 12px;
+        text-decoration: none;
+        &:hover{
+          background: transparent;
+          color: var(--clr-orange);
+          border: 2px solid white
         }
       }
     }
@@ -198,14 +203,16 @@ const SingleCourseWrapper = styled.div`
 
   .course-full{
     padding: 40px 16px;
+
     .course-sc-title{
       font-size: 22px;
       font-weight: 700;
       margin: 12px 0;
+     
     }
     .course-learn{
       max-width: 992px;
-      border: 1px solid rgba(0, 0, 0, 0.2);
+      border: 2px solid black;
       padding: 12px 28px 22px 28px;
 
       .course-learn-list{
@@ -229,7 +236,7 @@ const SingleCourseWrapper = styled.div`
     .course-content{
       max-width: 992px;
       margin-top: 30px;
-      border: 1px solid rgba(0, 0, 0, 0.2);
+      border: 2px solid black;
       padding: 12px 28px 22px 28px;
 
       .course-content-list{

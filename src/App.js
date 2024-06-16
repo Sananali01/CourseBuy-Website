@@ -6,6 +6,7 @@ import {Home, SingleCourse, Cart, Courses} from "./pages";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Tabs from './components/Tabs';
+import CheckoutPage from './pages/CheckoutPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Sidebar />
       <Routes>
         <Route path = "/" element = {<Home />} />
+        <Route path = "/checkout" element = {<CheckoutPage />} />
         <Route path = "/tabs" element = {<Tabs />} />
         <Route path = "/courses/:id" element = {<SingleCourse />} />
         <Route path = "/category/:category" element = {<Courses />} />
