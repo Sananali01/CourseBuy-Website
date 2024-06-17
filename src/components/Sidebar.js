@@ -23,6 +23,9 @@ const Sidebar = () => {
             <Link to="/contact">Contact</Link>
           </li>
           <li className='sidebar-link-item fw-5'>
+            <Link to="/gallery">Gallery</Link>
+          </li>
+          <li className='sidebar-link-item fw-5'>
             <Link to="/about">About</Link>
           </li>
         </ul>

@@ -71,6 +71,25 @@ const NavbarWrapper = styled.nav`
       opacity: 0.7;
     }
   }
+
+  @media (max-width: 340px) and (min-width: 320px) {
+    .navbar-brand {
+      font-size: 20px;
+    }
+
+    .cart-btn {
+      margin-right: 10px;
+      font-size: xx-large;
+    }
+
+    .item-count-badge {
+      font-size: 10px;
+      width: 20px;
+      height: 20px;
+      right: -8px;
+      top: -8px;
+    }
+  }
 `;
 
 export default Navbar;
