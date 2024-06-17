@@ -125,7 +125,7 @@ const AboutUsPage = () => {
 };
 
 const teamMembers = [
-  { name: 'Jane Doe', position: 'CEO & Founder', img: {img} },
+  { name: 'Jane Doe', position: 'CEO & Founder', img: img },
   { name: 'John Smith', position: 'Lead Developer', img: 'team-member2.jpg' },
   { name: 'Alice Johnson', position: 'Marketing Director', img: 'team-member3.jpg' },
   { name: 'Bob Brown', position: 'Product Manager', img: 'team-member4.jpg' },
@@ -225,9 +225,10 @@ const TeamMember = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
   img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    margin: 0 auto 20px;
     margin-bottom: 20px;
   }
 
