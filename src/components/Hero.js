@@ -41,6 +41,7 @@ transition: transform 0.3s;
       h1{
         color: var(--clr-orange);
         font-size: 32px;
+        font-weight: bold;
         margin-bottom: 5px;
       }
       p{

@@ -9,7 +9,7 @@
     --clr-purple: #A435F0;
     --clr-cream: #FFCF99;
     --clr-alice-blue: #F8F9FB;
-    --clr-grey: #888888;
+    --clr-grey: #535252;
     --spacing : 0.1rem;
     --transition: all 300ms linear;
 }
@@ -33,15 +33,18 @@ body{
     color: var(--clr-black);
     margin: 0;
     overflow-x: hidden;
-    background: #1E1E24;
+
 }
 ul{
     list-style-type: none;
 }
 a{
     text-decoration: none;
+    color: unset;
+    font-weight: bolder;
 }
 a:hover{
+    color: var(--clr-orange);
     text-decoration: none;
 }
 

@@ -178,8 +178,8 @@ const SingleCourseWrapper = styled.div`
         padding: 12px 28px;
         text-decoration: none;
         &:hover{
-          background: transparent;
-          color: var(--clr-orange);
+          background: black;
+          color: var(--clr-white);
           border: 2px solid white
         }
       }

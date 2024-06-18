@@ -40,9 +40,10 @@ const CourseList = () => {
             <li><FontAwesomeIcon icon={faUserTie} /> Certificates of completion</li>
           </ul>
         </div>
-        <h1>Popular Categories</h1>
+        
         <div className="courses-categories">
-
+        <h1 >Popular Categories</h1>
+          <div className='main-category'>
           <div className="category">
             <img src={python} alt="Python" />
             <h3>Python</h3>
@@ -73,6 +74,8 @@ const CourseList = () => {
             <h3>PHP</h3>
             <p>Get proficient in PHP for server-side scripting and web development.</p>
           </div>
+          </div>
+
         </div>
 
 
@@ -98,7 +101,7 @@ const CoursesListWrapper = styled.div`
 
     .icon {
       margin-bottom: 20px;
-      color: #fd9644;
+      color: var(--clr-orange);
     }
 
     h1 {
@@ -111,24 +114,28 @@ const CoursesListWrapper = styled.div`
     h2 {
       font-size: 2rem;
       margin-bottom: 20px;
-      color: white;
+      color: #333;
+      font-weight: bold;
     }
 
     p {
       font-size: 1.6rem;
-      color: var( --clr-cream);
+      color: var(--clr-grey);
       margin-bottom: 10px;
+      font-weight: bold;
     }
 
     .additional-info {
       font-size: 1.4rem;
-      color: var( --clr-cream);
+      color: #888;
       margin-top: 20px;
+      font-weight: bold;
     }
 
     .view-courses-button {
-      background-color:  #fc7f2c;
+      background-color:var(--clr-orange);
       color: white;
+      font-weight: bolder;
       font-size: 1.6rem;
       padding: 10px 20px;
       border: none;
@@ -139,17 +146,33 @@ const CoursesListWrapper = styled.div`
       text-decoration: none;
       &:hover {
         border: 2px solid black;
-        color: black;
+        background: black;
       }
     }
   }
 
+
   .courses-categories {
     margin: 40px 0;
-    display: flex;
+   
+    h1{
+    color: var(--clr-orange);
+    font-weight: bold;
+    font-size: xx-large;
+    margin-bottom: 35px;
+  }
+    .main-category{
+      display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 20px;
+
+
+    @media (min-width: 600px) and (max-width: 980px) {
+      justify-content: space-around;
+}
+
+    }
 
     .category {
       width: 300px;
@@ -194,14 +217,16 @@ const CoursesListWrapper = styled.div`
     h2 {
       font-size: 2rem;
       margin-bottom: 20px;
-      color: white;
+      color: #333;
+      font-weight: bold;
     }
 
     ul {
+      font-weight: bold;
       list-style-type: disc;
       padding-left: 20px;
       font-size: 1.4rem;
-      color: #666;
+      color: var(--clr-grey);
       display: inline-block;
       text-align: left;
 

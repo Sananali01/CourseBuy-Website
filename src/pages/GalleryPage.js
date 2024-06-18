@@ -33,6 +33,8 @@ import vue from '../assets/languages/vue.png';
 const GalleryWrapper = styled.div`
   padding: 50px 0;
   h1{
+    color: var(--clr-orange);
+    font-weight: bold;
     text-align: center;
     font-size: xx-large;
   }
@@ -40,7 +42,8 @@ const GalleryWrapper = styled.div`
 
 const GalleryHeader = styled.h2`
   font-size: 32px;
-  color: #333;
+  font-weight: 600;
+  color: var(--clr-grey);
   margin-bottom: 20px;
   margin-top: 20px;
 `;

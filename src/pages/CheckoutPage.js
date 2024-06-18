@@ -250,9 +250,9 @@ const CheckoutWrapper = styled.div`
     text-align: center;
     margin-bottom: 30px;
     h2 {
-      font-size: 24px;
-      font-weight: 700;
-      color: #333;
+      font-size: xx-large;
+      font-weight: bold;
+      color: var(--clr-orange);
       svg {
         margin-right: 10px;
       }
@@ -273,7 +273,7 @@ const CheckoutWrapper = styled.div`
       font-weight: 600;
       display: block;
       margin-bottom: 8px;
-      color: #555;
+      color: var(--clr-grey);
       svg {
         margin-right: 10px;
       }
@@ -316,7 +316,7 @@ const CheckoutWrapper = styled.div`
     font-size: 16px;
     font-weight: 700;
     color: #fff;
-    background: var(--orange);
+    background: var(--clr-orange);
     border: none;
     border-radius: 8px;
     cursor: pointer;

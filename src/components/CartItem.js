@@ -27,7 +27,7 @@ const CartItem = ({ cartItem }) => {
 const CartItemWrapper = styled.div`
   display: grid;
   grid-template-columns: 110px 1fr;
-  border: 2px solid #ddd;
+  border: 3px solid var(--clr-grey);;
   border-radius: 8px;
   padding: 16px;
   background: #fff;
@@ -53,19 +53,20 @@ const CartItemWrapper = styled.div`
     justify-content: space-between;
 
     .course-name {
-      font-size: 18px;
-      font-weight: 700;
+      font-size: x-large;
+      font-weight: bolder;
       margin-bottom: 8px;
     }
 
     .cart-item-creator {
       font-size: 14px;
-      color: #555;
+      color:var(--clr-grey);
       margin-bottom: 8px;
+      font-weight: bold;
     }
 
     .cart-item-price {
-      font-size: 16px;
+      font-size: x-large;
       font-weight: 700;
       color: #4caf50;
       margin-bottom: 8px;
@@ -73,7 +74,7 @@ const CartItemWrapper = styled.div`
 
     .cart-item-category {
       width: fit-content;
-      background: var(--orange);
+      background: var(--clr-orange);
       color: #fff;
       padding: 4px 8px;
       border-radius: 4px;
@@ -87,7 +88,7 @@ const CartItemWrapper = styled.div`
       width: fit-content;
       display: flex;
       align-items: center;
-      background-color: #f44336;
+      background-color: black;
       color: #fff;
       border: none;
       padding: 8px 12px;

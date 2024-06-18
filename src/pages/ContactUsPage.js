@@ -102,17 +102,21 @@ const ContactInfo = styled.div`
   .section-heading {
     text-align: center;
     margin-bottom: 30px;
+    
   }
 
   .section-heading h3 {
+
     font-size: 28px;
-    color: #333;
+    color: var(--clr-orange);
     margin-bottom: 10px;
+    font-weight: bold;
   }
 
   .section-heading p {
     font-size: 18px;
     color: #555;
+    font-weight: bolder;
   }
 
   .info-item {
@@ -123,13 +127,13 @@ const ContactInfo = styled.div`
 
     svg {
       font-size: 24px;
-      color: #007bff; /* original color */
+      color: var(--clr-orange);/* original color */
     }
 
     p {
       margin: 0;
       font-size: 18px;
-      color: #555;
+      color: var(--clr-grey);
     }
   }
 
@@ -149,7 +153,8 @@ const ContactForm = styled.div`
   h2 {
     margin-bottom: 30px;
     font-size: 32px;
-    color: #333;
+    font-weight:'bold';
+    color: var(--clr-orange);
     text-align: center;
   }
 
@@ -160,7 +165,8 @@ const ContactForm = styled.div`
 
     .form-label {
       font-size: 20px;
-      color: #555;
+      font-weight: 600;
+      color: var(--clr-grey);
     }
 
     .form-control {
@@ -182,7 +188,7 @@ const ContactForm = styled.div`
       font-size: 20px;
       font-weight: 700;
       border-radius: 8px;
-      background-color: var(--orange);
+      background-color: var(--clr-orange);
       border: none;
       &:hover {
         background-color: black;

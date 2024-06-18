@@ -88,7 +88,7 @@ const CartWrapper = styled.div`
 
   .cart-pg-title {
     padding-bottom: 20px;
-    border-bottom: 2px solid var(--orange);
+    border-bottom: 2px solid var(--clr-orange);
     margin-bottom: 20px;
     h2 {
       font-size: 28px;
@@ -112,7 +112,7 @@ const CartWrapper = styled.div`
         justify-content: space-between;
         align-items: center;
         padding-bottom: 10px;
-        border-bottom: 2px solid var(--orange);
+        border-bottom: 2px solid var(--clr-orange);
         margin-bottom: 20px;
 
         .cart-clear-btn {
@@ -120,10 +120,12 @@ const CartWrapper = styled.div`
           align-items: center;
           background: none;
           border: none;
-          color: #ff4d4f;
+          color: var(--clr-orange);
           cursor: pointer;
-          transition: color 0.3s;
-
+          border: none;
+          span{
+            font-weight: bold;
+          }
           .icon {
             margin-right: 5px;
           }
@@ -166,7 +168,7 @@ const CartWrapper = styled.div`
           font-size: 16px;
           font-weight: 700;
           color: #fff;
-          background: var(--orange);
+          background: var(--clr-orange);
           border: none;
           border-radius: 8px;
           cursor: pointer;

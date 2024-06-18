@@ -120,7 +120,7 @@ const CourseCard = styled.div`
         text-decoration: none;
         &:hover {
           background-color: var(--clr-orange);
-          color: var(--clr-black);
+          color: white;
         }
       }
 
@@ -131,7 +131,7 @@ const CourseCard = styled.div`
         text-decoration: none;
         &:hover {
           background-color: var(--clr-orange);
-          color: rgba(0, 0, 0, 0.9);
+
         }
       }
     }
@@ -142,7 +142,7 @@ const Notification = styled.div`
   position: fixed;
   top: 40px;
   right: 20px;
-  background: var(--orange);
+  background: var(--clr-orange);
   color: white;
   padding: 12px 24px;
   border-radius: 8px;

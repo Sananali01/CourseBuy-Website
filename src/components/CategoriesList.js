@@ -29,6 +29,11 @@ const CategoriesList = () => {
 const CategoriesListWrapper = styled.div`
   .categories-list-top{
     margin-bottom: 32px;
+    h2{
+      color: var(--clr-orange);
+    font-weight: bold;
+    font-size: xx-large;
+    }
   }
   .categories-list{
     gap: 32px;

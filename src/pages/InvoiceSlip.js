@@ -48,11 +48,13 @@ const InvoiceWrapper = styled.div`
     h2 {
       font-size: 28px;
       margin-bottom: 10px;
-      color: #333;
+      font-weight: bold;
+      color: var(--clr-orange);
     }
     p {
       font-size: 18px;
       color: #555;
+      font-weight: bold;
     }
   }
 
@@ -61,6 +63,7 @@ const InvoiceWrapper = styled.div`
       font-size: 24px;
       margin-bottom: 20px;
       color: #333;
+      font-weight: bolder;
     }
     .customer-info {
       margin-bottom: 30px;
@@ -75,6 +78,7 @@ const InvoiceWrapper = styled.div`
         font-size: 20px;
         margin-bottom: 15px;
         color: #333;
+        font-weight: bolder;
       }
       ul {
         list-style: none;
@@ -97,6 +101,7 @@ const InvoiceWrapper = styled.div`
         }
       }
       .total-amount {
+        border-top: 2px solid black;
         margin-top: 20px;
         font-size: 24px;
         font-weight: 700;
