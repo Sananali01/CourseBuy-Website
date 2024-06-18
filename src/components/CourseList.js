@@ -172,6 +172,9 @@ const CoursesListWrapper = styled.div`
     @media (min-width: 600px) and (max-width: 980px) {
       justify-content: space-around;
 }
+    @media (min-width: 320px) and (max-width: 600px) {
+      justify-content: center;
+}
 
     }
 
