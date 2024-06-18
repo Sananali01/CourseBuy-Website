@@ -22,12 +22,13 @@ const CourseList = () => {
       <div className="container">
         <div className="courses-list-top">
           <FontAwesomeIcon icon={faGraduationCap} size="3x" className="icon" />
-          <h1>A Broad Selection of Courses</h1>
-          <h2>Learn at Your Own Pace</h2>
-          <p>Choose from 204,000 online video courses with new additions published every month.</p>
+          <h1>Explore a World of Knowledge</h1>
+          <h2>Immerse Yourself in Learning</h2>
+          <p>Find an extensive selection of over 550,000 online courses covering a wide range of topics, always evolving to keep you engaged.</p>
           <p className="additional-info mb-5">
-            From programming and data science to leadership and personal development, you'll find courses that suit your needs and interests.
+            Whether you're passionate about technology, arts, or business, our courses are designed to ignite your interests and promote personal development.
           </p>
+
 
           <Link to='/tabs' className="view-courses-button"><FontAwesomeIcon icon={faSmile} /> View All Courses</Link>
         </div>
@@ -40,40 +41,40 @@ const CourseList = () => {
             <li><FontAwesomeIcon icon={faUserTie} /> Certificates of completion</li>
           </ul>
         </div>
-        
+
         <div className="courses-categories">
-        <h1 >Popular Categories</h1>
+          <h1 >Popular Categories</h1>
           <div className='main-category'>
-          <div className="category">
-            <img src={python} alt="Python" />
-            <h3>Python</h3>
-            <p>Learn Python programming for web development, data analysis, and more.</p>
-          </div>
-          <div className="category">
-            <img src={javascript} alt="JavaScript" />
-            <h3>JavaScript</h3>
-            <p>Master JavaScript for web development and building interactive websites.</p>
-          </div>
-          <div className="category">
-            <img src={java} alt="Java" />
-            <h3>Java</h3>
-            <p>Explore Java for enterprise applications and Android development.</p>
-          </div>
-          <div className="category">
-            <img src={angular} alt="Angular" />
-            <h3>Angular</h3>
-            <p>Learn Angular for building dynamic and scalable web applications.</p>
-          </div>
-          <div className="category">
-            <img src={c} alt="C++" />
-            <h3>C++</h3>
-            <p>Dive into C++ for systems programming and game development.</p>
-          </div>
-          <div className="category">
-            <img src={php} alt="PHP" />
-            <h3>PHP</h3>
-            <p>Get proficient in PHP for server-side scripting and web development.</p>
-          </div>
+            <div className="category">
+              <img src={python} alt="Python" />
+              <h3>Python</h3>
+              <p>Learn Python programming for web development, data analysis, and more.</p>
+            </div>
+            <div className="category">
+              <img src={javascript} alt="JavaScript" />
+              <h3>JavaScript</h3>
+              <p>Master JavaScript for web development and building interactive websites.</p>
+            </div>
+            <div className="category">
+              <img src={java} alt="Java" />
+              <h3>Java</h3>
+              <p>Explore Java for enterprise applications and Android development.</p>
+            </div>
+            <div className="category">
+              <img src={angular} alt="Angular" />
+              <h3>Angular</h3>
+              <p>Learn Angular for building dynamic and scalable web applications.</p>
+            </div>
+            <div className="category">
+              <img src={c} alt="C++" />
+              <h3>C++</h3>
+              <p>Dive into C++ for systems programming and game development.</p>
+            </div>
+            <div className="category">
+              <img src={php} alt="PHP" />
+              <h3>PHP</h3>
+              <p>Get proficient in PHP for server-side scripting and web development.</p>
+            </div>
           </div>
 
         </div>
