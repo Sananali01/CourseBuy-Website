@@ -102,25 +102,27 @@ const CoursesListWrapper = styled.div`
     }
 
     h1 {
+      color: var(--clr-orange);
       font-size: 3rem;
+      font-weight: bold;
       margin-bottom: 20px;
     }
 
     h2 {
       font-size: 2rem;
       margin-bottom: 20px;
-      color: #333;
+      color: white;
     }
 
     p {
       font-size: 1.6rem;
-      color: #666;
+      color: var( --clr-cream);
       margin-bottom: 10px;
     }
 
     .additional-info {
       font-size: 1.4rem;
-      color: #888;
+      color: var( --clr-cream);
       margin-top: 20px;
     }
 
@@ -192,7 +194,7 @@ const CoursesListWrapper = styled.div`
     h2 {
       font-size: 2rem;
       margin-bottom: 20px;
-      color: #333;
+      color: white;
     }
 
     ul {

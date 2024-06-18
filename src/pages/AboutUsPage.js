@@ -8,7 +8,7 @@ import { faQuoteLeft, faQuoteRight, faLaptopCode, faUsers, faGraduationCap } fro
 import { faTwitter, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import img from '../assets/peakpx.jpg'
+import img from '../assets/peakpx.jpg';
 
 // Animation styles
 const animations = StyleSheet.create({
@@ -18,13 +18,7 @@ const animations = StyleSheet.create({
   }
 });
 
-
-
 const AboutUsPage = () => {
-
- 
-
-
   const testimonials = [
     { text: "KnowledgeTree has transformed my career. The courses are top-notch and the support is fantastic!", author: "Emily R." },
     { text: "I love the flexibility and the depth of knowledge provided by the instructors.", author: "Michael B." },
@@ -286,6 +280,27 @@ const StyledSlider = styled(Slider)`
   .slick-prev:before,
   .slick-next:before {
     color: #333;
+  }
+
+
+    .slick-next {
+      right: 120px;
+    }
+    .slick-prev {
+      left: 120px;
+    }
+
+  @media (max-width: 1000px) {
+    .slick-prev,
+    .slick-next {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .slick-dots {
+      bottom: -20px;
+    }
   }
 `;
 
