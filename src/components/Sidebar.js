@@ -11,7 +11,7 @@ const Sidebar = () => {
   const { closeSidebar, isSidebarOpen } = useSidebarContext();
 
   return (
-    <SidebarWrapper className={`bg-white ${isSidebarOpen ? "show-sidebar" : ""}`}>
+    <SidebarWrapper className={` ${isSidebarOpen ? "show-sidebar" : ""}`}>
       <button type="button" className='sidebar-close-btn' onClick={() => closeSidebar()}>
         <MdClose />
       </button>
@@ -65,6 +65,7 @@ const CategoryList = () => {
 }
 
 const SidebarWrapper = styled.div`
+background: var(--clr-black);
   position: fixed;
   top: 0;
   right: 0;
@@ -84,7 +85,7 @@ const SidebarWrapper = styled.div`
     position: absolute;
     right: 20px;
     top: 20px;
-    border: 2px solid var(--clr-black);
+    border: 2px solid var(--clr-white);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,11 +94,11 @@ const SidebarWrapper = styled.div`
     border-radius: 50%;
     transition: all 300ms ease-in-out;
     background-color: transparent;
-    color: var(--clr-black);
+    color: var(--clr-white);
     cursor: pointer;
 
     &:hover {
-      background-color: var(--clr-black);
+      background-color: var(--clr-orange);
       color: var(--clr-white);
     }
   }
@@ -105,12 +106,15 @@ const SidebarWrapper = styled.div`
   .sidebar-content {
     margin-top: 50px;
     h6 {
+      color: var(--clr-white);
       margin-bottom: 16px;
     }
     .sidebar-links {
+      color: var(--clr-white);
       margin-bottom: 30px;
     }
     .sidebar-link-item {
+      color: var(--clr-white);
       text-decoration: none;
       font-size: 15px;
       margin-bottom: 12px;
