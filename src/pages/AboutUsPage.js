@@ -8,7 +8,12 @@ import { faQuoteLeft, faQuoteRight, faLaptopCode, faUsers, faGraduationCap } fro
 import { faTwitter, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import img from '../assets/peakpx.jpg';
+import img from '../assets/1.jpg';
+import img2 from '../assets/2.jpg';
+import img3 from '../assets/3.png';
+import img4 from '../assets/4.jpg';
+import img5 from '../assets/5.jpg';
+import img6 from '../assets/6.jpg';
 
 // Animation styles
 const animations = StyleSheet.create({
@@ -44,12 +49,13 @@ const AboutUsPage = () => {
 
   return (
     <AboutWrapper>
-      <div className="container">
+      <div className="container mb-5">
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <AboutContent>
+            <FontAwesomeIcon icon={faGraduationCap} className='main-icon' /> 
               <h2 className={css(animations.fadeInUp)}>
-                <FontAwesomeIcon icon={faGraduationCap} /> About KnowledgeTree
+               About KnowledgeTree
               </h2>
               <p className={css(animations.fadeInUp)}>
                 Welcome to KnowledgeTree, your premier destination for online courses in coding, marketing, and more. 
@@ -120,19 +126,19 @@ const AboutUsPage = () => {
 
 const teamMembers = [
   { name: 'Jane Doe', position: 'CEO & Founder', img: img },
-  { name: 'John Smith', position: 'Lead Developer', img: 'team-member2.jpg' },
-  { name: 'Alice Johnson', position: 'Marketing Director', img: 'team-member3.jpg' },
-  { name: 'Bob Brown', position: 'Product Manager', img: 'team-member4.jpg' },
-  { name: 'Mary Davis', position: 'UX/UI Designer', img: 'team-member5.jpg' },
-  { name: 'Tom Wilson', position: 'Data Scientist', img: 'team-member6.jpg' }
+  { name: 'John Smith', position: 'Lead Developer', img: img2 },
+  { name: 'Alice Johnson', position: 'Marketing Director', img: img3 },
+  { name: 'Bob Brown', position: 'Product Manager', img: img4},
+  { name: 'Mary Davis', position: 'UX/UI Designer', img: img5 },
+  { name: 'Tom Wilson', position: 'Data Scientist', img: img6 }
 ];
 
 const AboutWrapper = styled.div`
   padding: 50px 0;
-  background: #f5f5f5;
 `;
 
 const AboutContent = styled.div`
+
   text-align: center;
   max-width: 700px;
   margin: 0 auto;
@@ -140,10 +146,14 @@ const AboutContent = styled.div`
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+.main-icon{
+  font-size: xx-large;
+  color: var(--clr-orange);
+}
   h2 {
-    font-size: 36px;
-    color: var(--orange);
+    font-size: xx-large;
+    color: var(--clr-orange);
+    font-weight: bolder;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
@@ -159,14 +169,15 @@ const AboutContent = styled.div`
 `;
 
 const MissionSection = styled.div`
-  background: #f9f9f9;
+  background: var(--clr-black);
   padding: 50px 0;
   text-align: center;
 
   h2 {
     font-size: 32px;
-    color: var(--orange);
+    color: var(--clr-orange);
     margin-bottom: 20px;
+    font-weight: bolder;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,7 +185,7 @@ const MissionSection = styled.div`
 
   p {
     font-size: 18px;
-    color: #555;
+    color: white;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.8;
@@ -184,11 +195,13 @@ const MissionSection = styled.div`
 const TeamSection = styled.div`
   padding: 50px 0;
   text-align: center;
+ 
 
   h2 {
     font-size: 32px;
-    color: var(--orange);
+    color: var(--clr-orange);
     margin-bottom: 20px;
+    font-weight: bolder;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,6 +214,7 @@ const TeamGrid = styled.div`
   gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
+  
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
@@ -217,24 +231,29 @@ const TeamMember = styled.div`
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--clr-black);
 
   img {
-    width: 200px;
-    height: 200px;
-    border-radius: 20%;
+    height: 31rem;
+    width: 21rem;
+    border-radius: 0%;
+    border: 0.5rem solid var(--clr-grey);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, .3);
+    object-fit: cover;
     margin: 0 auto 20px;
     margin-bottom: 20px;
   }
 
   h3 {
     font-size: 22px;
-    color: var(--orange);
+    color: var(--clr-orange);
     margin-bottom: 10px;
   }
 
   p {
     font-size: 16px;
-    color: #555;
+    font-weight: 600;
+    color: var(--clr-grey);
   }
 `;
 
@@ -245,21 +264,22 @@ const SocialIcons = styled.div`
     margin: 0 5px;
     color: #555;
     cursor: pointer;
-
+    color: var(--clr-orange);
     &:hover {
-      color: #333;
+      color: var(--clr-grey);
     }
   }
 `;
 
 const TestimonialsSection = styled.div`
-  background: #f9f9f9;
+  background: var(--clr-black);
   padding: 50px 0;
   text-align: center;
 
   h2 {
     font-size: 32px;
-    color: var(--orange);
+    font-weight: bold;
+    color: var(--clr-orange);
     margin-bottom: 20px;
   }
 `;
@@ -270,16 +290,16 @@ const StyledSlider = styled(Slider)`
   }
 
   .slick-dots li button:before {
-    color: #333;
+    color: white;
   }
 
   .slick-dots li.slick-active button:before {
-    color: #333;
+    color: white;
   }
 
   .slick-prev:before,
   .slick-next:before {
-    color: #333;
+    color: white;
   }
 
 
@@ -311,7 +331,7 @@ const Testimonial = styled.div`
 
   p {
     font-size: 18px;
-    color: #555;
+    color: var(--clr-white);
     font-style: italic;
     line-height: 1.8;
     margin: 10px 0;
@@ -319,14 +339,14 @@ const Testimonial = styled.div`
 
   h4 {
     font-size: 16px;
-    color: var(--orange);
+    color: var(--clr-cream);
     font-weight: bold;
     margin-top: 10px;
   }
 
   svg {
     font-size: 20px;
-    color: #333;
+    color: white;
     margin: 0 10px;
   }
 `;
