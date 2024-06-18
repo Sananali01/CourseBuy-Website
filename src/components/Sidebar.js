@@ -4,6 +4,8 @@ import { MdClose } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useSidebarContext } from '../context/sidebar_context';
 import { useCoursesContext } from '../context/courses_context';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faAddressBook, faImage, faFileAlt,faGraduationCap,faList,faFolderOpen } from '@fortawesome/free-solid-svg-icons'; // Import necessary icons
 
 const Sidebar = () => {
   const { closeSidebar, isSidebarOpen } = useSidebarContext();
@@ -14,22 +16,30 @@ const Sidebar = () => {
         <MdClose />
       </button>
       <div className='sidebar-content'>
-      <h6 className='fs-18'>Pages</h6>
+        <h6 className='fs-18'> <FontAwesomeIcon icon={faList} /> Pages</h6>
         <ul className='sidebar-links'>
-        <li className='sidebar-link-item fw-5'>
-            <Link to="/tabs">Courses</Link>
+          <li className='sidebar-link-item fw-5'>
+            <Link to="/tabs">
+              <FontAwesomeIcon icon={faGraduationCap} /> Courses
+            </Link>
           </li>
           <li className='sidebar-link-item fw-5'>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">
+              <FontAwesomeIcon icon={faAddressBook} /> Contact
+            </Link>
           </li>
           <li className='sidebar-link-item fw-5'>
-            <Link to="/gallery">Gallery</Link>
+            <Link to="/gallery">
+              <FontAwesomeIcon icon={faImage} /> Gallery
+            </Link>
           </li>
           <li className='sidebar-link-item fw-5'>
-            <Link to="/about">About</Link>
+            <Link to="/about">
+              <FontAwesomeIcon icon={faFileAlt} /> About
+            </Link>
           </li>
         </ul>
-        <h6 className='fs-18'>Categories</h6>
+        <h6 className='fs-18'> <FontAwesomeIcon icon={faFolderOpen} /> Categories</h6>
         <ul className='sidebar-category'>
           <CategoryList />
         </ul>
@@ -45,7 +55,9 @@ const CategoryList = () => {
     <>
       {categories.map((category, idx) => (
         <li className='sidebar-link-item fw-5' key={idx}>
-          <Link to={`category/${category}`}>{category.toUpperCase()}</Link>
+          <Link to={`category/${category}`}>
+          {category.toUpperCase()}
+          </Link>
         </li>
       ))}
     </>
@@ -80,11 +92,16 @@ const SidebarWrapper = styled.div`
     height: 26px;
     border-radius: 50%;
     transition: all 300ms ease-in-out;
+    background-color: transparent;
+    color: var(--clr-black);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--clr-black);
+      color: var(--clr-white);
+    }
   }
-  .sidebar-close-btn:hover {
-    background-color: var(--clr-black);
-    color: var(--clr-white);
-  }
+
   .sidebar-content {
     margin-top: 50px;
     h6 {
@@ -98,6 +115,10 @@ const SidebarWrapper = styled.div`
       font-size: 15px;
       margin-bottom: 12px;
       transition: var(--transition);
+
+      svg {
+        margin-right: 10px; /* Adjust spacing between icon and text */
+      }
 
       &:hover {
         transform: translateX(6px);
